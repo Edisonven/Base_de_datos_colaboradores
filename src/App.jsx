@@ -8,6 +8,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
+  // estados que almancenan valores (base de datos, errores, valores de inputs y filtrado)
   const [listaColaboradores, setListaColaboradores] =
     useState(BaseColaboradores);
   const [errores, setErrores] = useState(false);
@@ -21,18 +22,19 @@ function App() {
     cargo: "",
     telefono: "",
   });
+
+  //funcion que filtra los colaboradores por el valor que se ingresa en el input buscador
   const nuevaBaseDatos = [...listaColaboradores, formValue];
   const buscarColaborador = (event) => {
     setSearchPerson(event.target.value);
     if (event.target.value === "") {
-      setListaColaboradores(listaColaboradores);
+      setListaColaboradores(BaseColaboradores);
     } else {
       const results = [...nuevaBaseDatos].filter((colaborador) =>
         colaborador.nombre
           .toLocaleLowerCase()
           .includes(event.target.value.toLocaleLowerCase())
       );
-      console.log(results);
       setListaColaboradores(results);
     }
   };

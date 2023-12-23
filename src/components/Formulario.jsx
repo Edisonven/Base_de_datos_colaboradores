@@ -9,6 +9,7 @@ const Formulario = ({
   formValue,
   nuevaBaseDatos,
 }) => {
+  // expresiones regulares para que elo usuario ingrese un nombre y correo válido
   const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
   const validNombre = /^([a-zA-Z]+)(\s[a-zA-Z]+)*$/;
 
@@ -58,13 +59,16 @@ const Formulario = ({
       cargo: "",
       telefono: "",
     });
+
+    //función que añade un colaborador siempre que se cumplan todas las condiciones
     setListaColaboradores(nuevaBaseDatos);
   };
 
+  //funcion que setea los valores del input para añadir un colaborador
   const updateForm = (event) => {
     setFormValue({ ...formValue, [event.target.name]: event.target.value });
   };
-
+  // apartado que renderiza el formulario
   return (
     <div>
       <form
@@ -107,9 +111,7 @@ const Formulario = ({
           value={formValue.telefono}
           onChange={updateForm}
         />
-        <Button type="submit">
-          Agregar colaborador
-        </Button>
+        <Button type="submit">Agregar colaborador</Button>
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 import Table from "react-bootstrap/Table";
 
+// componente listado que muestra la lista de colaboradores base más los usuarios nuevos
 const Listado = ({ listaColaboradores }) => {
   return (
     <div className="container__table">
