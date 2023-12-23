@@ -34,4 +34,7 @@
   .listado__container {
     transform: scale(0.7);
   }
+  .container {
+    gap: 1px;
+  }
 }
