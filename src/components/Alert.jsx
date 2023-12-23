@@ -1,13 +1,14 @@
-import Alert from 'react-bootstrap/Alert';
+import Alert from "react-bootstrap/Alert";
 
-function Alerta({color, mensajeAlerta}) {
+const FormAlert = ({ variant, exito, errores }) => {
   return (
     <>
-        <Alert className="alerta" variant={color}>
-          {mensajeAlerta}
-        </Alert>
+      <Alert className="bootstrap-alert" variant={variant}>
+        {exito}
+        {errores}
+      </Alert>
     </>
   );
-}
+};
 
-export default Alerta;
+export default FormAlert;
