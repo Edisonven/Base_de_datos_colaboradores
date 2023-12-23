@@ -1,6 +1,6 @@
 const BaseColaboradores = [
   {
-    id: "1",
+    id: 1,
     nombre: "Juan Soto",
     correo: "juans@colaborador.com",
     edad: "23",
@@ -8,7 +8,7 @@ const BaseColaboradores = [
     telefono: "99887766",
   },
   {
-    id: "2",
+    id: 2,
     nombre: "Lucas Pailamilla",
     correo: "lucasp@colaborador.com",
     edad: "31",
@@ -16,7 +16,7 @@ const BaseColaboradores = [
     telefono: "88779955",
   },
   {
-    id: "3",
+    id: 3,
     nombre: "Diego Riquelme",
     edad: "28",
     cargo: "Ingeniero DevOps",

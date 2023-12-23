@@ -81,7 +81,7 @@ const Formulario = ({
           type="hidden"
           placeholder="Nombre del colaborador"
           name="id"
-          value={formValue.id = Date.now()}
+          value={formValue.id = nuevaBaseDatos.length + 1}
           onChange={updateForm}
         />
         <input
