@@ -5,9 +5,10 @@ import Listado from "./components/Listado";
 import Formulario from "./components/Formulario";
 import Buscador from "./components/Buscador";
 import BaseColaboradores from "./Colaboradores";
+import Alerta from "./components/Alert";
 
 function App() {
-  const [error, setError] = useState("");
+  const [errores, setErrores] = useState("");
   const [registrado, setRegistrado] = useState("");
 
   return (
@@ -19,11 +20,15 @@ function App() {
       </div>
       <div className="container__formulario">
         <Formulario
-          error={error}
+          errores={errores}
           registrado={registrado}
-          setError={setError}
+          setErrores={setErrores}
           setRegistrado={setRegistrado}
         />
+        {errores ? <Alerta color="danger" mensajeAlerta={errores} /> : null}
+        {registrado ? (
+          <Alerta color="success" mensajeAlerta={registrado} />
+        ) : null}
       </div>
     </div>
   );

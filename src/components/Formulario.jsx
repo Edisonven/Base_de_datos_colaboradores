@@ -6,7 +6,7 @@ import Alerta from "./Alert";
 import BaseColaboradores from "../Colaboradores";
 import "./Formulario.css";
 
-function Formulario({ error, registrado, setError, setRegistrado }) {
+function Formulario({ errores, registrado, setErrores, setRegistrado }) {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [edad, setEdad] = useState("");
@@ -37,23 +37,23 @@ function Formulario({ error, registrado, setError, setRegistrado }) {
     e.preventDefault();
     //Condicional para alerta del input nombre
     if (nombre === "") {
-      return setError("Ingrese su nombre");
+      return setErrores("Ingrese su nombre");
     }
     //Condicional para alerta del input email
     else if (!validEmail.test(email) && email.length == 0) {
-      return setError("Ingrese un correo valido");
+      return setErrores("Ingrese un correo valido");
     }
     //Condicional para alerta del input edad
     else if (edad === "") {
-      return setError("Ingrese su Edad");
+      return setErrores("Ingrese su Edad");
     }
     //Condicional para alerta del input Cargo
     else if (cargo === "") {
-      return setError("Ingrese su Cargo");
+      return setErrores("Ingrese su Cargo");
     }
     //Condicional para alerta del input Telefono
     else if (telefono.length <= 5) {
-      return setError("Ingrese un numero de telefono valido");
+      return setErrores("Ingrese un numero de telefono valido");
     }
     //Condicional para alerta de registrado exitoso
     else if (
@@ -64,7 +64,7 @@ function Formulario({ error, registrado, setError, setRegistrado }) {
       telefono.length >= 6
     ) {
       setRegistrado("!!!Colaborador registrado con exito¡¡¡");
-      setError("");
+      setErrores("");
       setListaUsuario([
         ...listadoUsuario,
         {
@@ -129,10 +129,6 @@ function Formulario({ error, registrado, setError, setRegistrado }) {
         <Button bg="primary" size="sm" type="submit">
           Agregar Colaborador
         </Button>
-        {error ? <Alerta color="danger" mensajeAlerta={error} /> : null}
-        {registrado ? (
-          <Alerta color="success" mensajeAlerta={registrado} />
-        ) : null}
       </form>
     </div>
   );
