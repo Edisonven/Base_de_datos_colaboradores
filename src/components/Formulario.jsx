@@ -2,11 +2,10 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import Alerta from "./Alert";
 import BaseColaboradores from "../Colaboradores";
 import "./Formulario.css";
 
-function Formulario({ errores, registrado, setErrores, setRegistrado }) {
+function Formulario({ setErrores, setRegistrado }) {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [edad, setEdad] = useState("");
@@ -35,8 +34,17 @@ function Formulario({ errores, registrado, setErrores, setRegistrado }) {
   //Condicionales para Alert
   const registrarse = (e) => {
     e.preventDefault();
-    //Condicional para alerta del input nombre
-    if (nombre === "") {
+    //Condicional que evalúa  que el campo no esté vacío
+    if (
+      nombre === "" &&
+      email === "" &&
+      edad === "" &&
+      cargo === "" &&
+      telefono === ""
+    ) {
+      return setErrores("¡Completa todos los campos!"), setExito("");
+      //Condicional para alerta del input nombre
+    } else if (nombre === "") {
       return setErrores("Ingrese su nombre");
     }
     //Condicional para alerta del input email
