@@ -6,7 +6,7 @@ const Buscador = ({ setFiltro, listaColaboradores }) => {
     if (event.target.value !== "") {
       const results = [...listaColaboradores].filter((colaborador) =>
         Object.values(colaborador).some((valor) =>
-          String(valor).toLowerCase().includes(event.target.value)
+          String(valor).toLowerCase().includes(event.target.value.toLowerCase())
         )
       );
       setFiltro(results);
