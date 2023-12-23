@@ -78,6 +78,13 @@ const Formulario = ({
       >
         <h1>Agregar colaborador</h1>
         <input
+          type="hidden"
+          placeholder="Nombre del colaborador"
+          name="id"
+          value={formValue.id = Date.now()}
+          onChange={updateForm}
+        />
+        <input
           type="text"
           placeholder="Nombre del colaborador"
           name="nombre"
