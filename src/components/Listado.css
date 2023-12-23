@@ -1,0 +1,9 @@
+@media (max-width:576px) {
+    .listado {
+        display: none;
+    }
+   }
+
+   @media (min-width:576px) {
+        
+   }

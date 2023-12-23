@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@media (min-width:576px) {
+    .titulo {
+        text-align: center;
+    }
+}
+
+
