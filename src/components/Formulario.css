@@ -1,15 +1,11 @@
-
-.formulario {
+.container__formulario {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
 }
-.formulario input {
-  height: 30px;
-}
-.formulario button {
+.container__formulario button {
   background-color: blueviolet;
-  margin-bottom: 20px;
-  height: 35px;
+}
+.container__formulario:hover button {
+  background-color: #9842e9;
 }

@@ -1,4 +1,5 @@
 import Button from "react-bootstrap/Button";
+import "./Formulario.css";
 
 const Formulario = ({
   setListaColaboradores,
@@ -106,7 +107,7 @@ const Formulario = ({
           value={formValue.telefono}
           onChange={updateForm}
         />
-        <Button type="submit" variant="success">
+        <Button type="submit">
           Agregar colaborador
         </Button>
       </form>

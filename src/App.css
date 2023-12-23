@@ -17,12 +17,6 @@
   min-width: 375px;
 }
 
-.container__formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 .bootstrap-alert {
   margin-top: 15px;
 }
