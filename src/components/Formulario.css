@@ -1,35 +1,15 @@
-.formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
 
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
-.formulario  input {
-    height: 25px;
-    
+.formulario input {
+  height: 30px;
 }
 .formulario button {
-    height: 30px;
-    background-color: blueviolet;
-    margin-bottom: 20px;
+  background-color: blueviolet;
+  margin-bottom: 20px;
+  height: 35px;
 }
-@media (max-width:576px) {
-    .formulario {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 300px;
-        max-height: 300px;
-        gap: 10px;
-    }
-    .formulario  input {
-        height: 25px;
-        
-    }
-    .formulario button {
-        height: 30px;
-        background-color: blueviolet;
-    }
-   }
-

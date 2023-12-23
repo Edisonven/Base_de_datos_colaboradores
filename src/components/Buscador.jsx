@@ -20,7 +20,7 @@ function Buscador() {
     <>
     <section className="buscador">
     <InputGroup className="mb-3" onChange={filtrar}>
-      <InputGroup.Text >Busquedad</InputGroup.Text>
+      <InputGroup.Text >Busqueda</InputGroup.Text>
       <Form.Control 
       aria-label="First name"
        />
