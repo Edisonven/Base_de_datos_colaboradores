@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="container">
-      <div>
+      <div className="listado__container">
         <h1>Lista de colaboradores</h1>
         <Buscador
           searchPerson={searchPerson}
