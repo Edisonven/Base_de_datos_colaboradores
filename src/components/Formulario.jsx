@@ -30,10 +30,10 @@ const Formulario = ({
       //Condicional que evalúa que el nombre tenga formato válido
     } else if (!validNombre.test(formValue.nombre)) {
       return setErrores("Formato de nombre invalido (ingrese solo letras)");
-      //Condicional que evalúa que el nombre no esté vacío
+      //Condicional que evalúa que el mail no esté vacío
     } else if (formValue.correo === "") {
       return setErrores("Ingrese su correo");
-      //Condicional que evalúa que el mail sea válido y además que el campo no esté vacío
+      //Condicional que evalúa que el mail sea válido 
     } else if (!validEmail.test(formValue.correo)) {
       return setErrores("formato de correo inválido");
       //Condicional que evalúa que la edad no esté vacía
