@@ -27,30 +27,22 @@ function App() {
       <div className="listado__container">
         <h1>Lista de colaboradores</h1>
         <Buscador
-          nuevaBaseDatos={nuevaBaseDatos}
-          setListaColaboradores={setListaColaboradores}
           listaColaboradores={listaColaboradores}
-          filtro={filtro}
           setFiltro={setFiltro}
         ></Buscador>
         <Listado
           listaColaboradores={listaColaboradores}
-          setListaColaboradores={setListaColaboradores}
           filtro={filtro}
         ></Listado>
       </div>
       <div>
         <Formulario
-          listaColaboradores={listaColaboradores}
           setListaColaboradores={setListaColaboradores}
-          errores={errores}
           setExito={setExito}
           setErrores={setErrores}
-          exito={exito}
           nuevaBaseDatos={nuevaBaseDatos}
           formValue={formValue}
           setFormValue={setFormValue}
-          setFiltro={setFiltro}
         ></Formulario>
         {errores ? (
           <FormAlert
