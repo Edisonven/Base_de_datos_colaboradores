@@ -5,7 +5,7 @@ const BaseColaboradores = [
     correo: "juans@colaborador.com",
     edad: "23",
     cargo: "Desarrollador FrontEnd",
-    telefono: "999887766",
+    telefono: 999887766,
   },
   {
     id: 2,
@@ -13,14 +13,14 @@ const BaseColaboradores = [
     correo: "lucasp@colaborador.com",
     edad: "31",
     cargo: "Desarrollador Backend",
-    telefono: "988779955",
+    telefono: 988779955,
   },
   {
     id: 3,
     nombre: "Diego Riquelme",
     edad: "28",
     cargo: "Ingeniero DevOps",
-    telefono: "999226644",
+    telefono: 999226644,
     correo: "diegor@colaborador.com",
   },
 ];
